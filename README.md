@@ -1,4 +1,4 @@
-## Things to do 
+## Things to do for InC 2025
 1. Accepting all the characters in the abstract
 2. Changing UI
 3. Display all the filled details before registrations (payment page)
