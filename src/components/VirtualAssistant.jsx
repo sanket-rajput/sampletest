@@ -132,14 +132,16 @@ const particles = useMemo(() => {
             id="assistant-model"
             src="/videos/Untitled.glb"
             autoplay
-            animation-name="mixamo.com"
             loop
             disable-zoom
             disable-pan
             disable-tap
             disable-rotate
             interaction-prompt="none"
-            camera-orbit="0deg 90deg 140%"
+            camera-controls
+            camera-orbit="0deg 90deg 0%"
+            camera-target="0m 0.8m -0.8m"
+
             field-of-view="22deg"
             style={{
               width: "100%",
