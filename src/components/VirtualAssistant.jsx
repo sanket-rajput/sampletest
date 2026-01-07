@@ -139,7 +139,7 @@ const particles = useMemo(() => {
             disable-rotate
             interaction-prompt="none"
             camera-controls
-            camera-orbit="0deg 90deg 0%"
+            camera-orbit="0deg 90deg 80%"
             camera-target="0m 0.8m -0.8m"
 
             field-of-view="22deg"
