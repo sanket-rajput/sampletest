@@ -17,7 +17,7 @@ const Sponsors = () => {
       {/* <h2 className={`${styles.sectionHeadText} text-center`}>Our Sponsors.</h2> */}
 <div className="w-full flex items-center justify-center py-16">
       <p className="text-base sm:text-lg font-light text-white/60 tracking-wide">
-        Sponsor reveal coming soon.
+        Sponsors revealing soon.
       </p>
     </div> <div
         className="pointer-events-none absolute inset-0 opacity-[0.22] -z-10"

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import FormsBanner from "./forms/formBanner";
-import ProjectDetailsFormStep from "./forms/steps/projectDetails";
-import AddMemberStep from "./forms/steps/addMembersStep";
-import CollegeDetailsStep from "./forms/steps/collegeDetailStep";
-import PaymentStep from "./forms/steps/paymentStep";
-import StepProgressBar from "./forms/stepProgress";
+// import ProjectDetailsFormStep from "./forms/steps/projectDetails";
+// import AddMemberStep from "./forms/steps/addMembersStep";
+// import CollegeDetailsStep from "./forms/steps/collegeDetailStep";
+// import PaymentStep from "./forms/steps/paymentStep";
+// import StepProgressBar from "./forms/stepProgress";
 import { useParams } from "react-router-dom";
 import { eventsData } from "../constants";
-import { qr } from "../assets";
+import { IconAlertCircle, IconMessageCircle } from "@tabler/icons-react";
+// import { qr } from "../assets";
 
 const osteps = [
   { id: 1, label: "Project Details" },
@@ -24,33 +25,33 @@ const pSteps = [
 
 const Register = () => {
   const { event } = useParams();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [steps, setSteps] = useState(osteps);
+  // const [currentStep, setCurrentStep] = useState(0);
+  // const [steps, setSteps] = useState(osteps);
 
-  const nextStep = () => setCurrentStep((prev) => prev + 1);
-  const prevStep = () => setCurrentStep((prev) => prev - 1);
+  // const nextStep = () => setCurrentStep((prev) => prev + 1);
+  // const prevStep = () => setCurrentStep((prev) => prev - 1);
 
   // Get event data safely
   const eventData = eventsData[event];
 
   // 🚨 Prevent black screen if event not found
-  if (!eventData) {
-    return (
-      <div className="text-center text-white pt-32">
-        <h2 className="text-3xl font-bold">Invalid Event: {event}</h2>
-        <p className="text-lg text-gray-400 mt-2">
-          Event not found in eventsData.
-        </p>
-      </div>
-    );
-  }
+  // if (!eventData) {
+  //   return (
+  //     <div className="text-center text-white pt-32">
+  //       <h2 className="text-3xl font-bold">Invalid Event: {event}</h2>
+  //       <p className="text-lg text-gray-400 mt-2">
+  //         Event not found in eventsData.
+  //       </p>
+  //     </div>
+  //   );
+  // }
 
-  useEffect(() => {
-    if (event === "pradnya") {
-      setCurrentStep(1);
-      setSteps(pSteps);
-    }
-  }, [event]);
+  // useEffect(() => {
+  //   if (event === "pradnya") {
+  //     setCurrentStep(1);
+  //     setSteps(pSteps);
+  //   }
+  // }, [event]);
 
   return (
     <>
@@ -66,15 +67,19 @@ const Register = () => {
       </div>
 
       <div className="container mx-auto px-2 pb-16">
-        <StepProgressBar
+        {/* <StepProgressBar
           steps={steps}
           currentStep={event === "pradnya" ? currentStep - 1 : currentStep}
-        />
+        /> */}
 
         <div className="mt-8">
 
+          {event === 'impetus' && <EventCloseMessage event_name={'Impetus'} />}
+          {event === 'pradnya' && <EventCloseMessage event_name={'Pradnya'} />}
+          {event === 'concepts' && <EventCloseMessage event_name={'Concepts'} />}
+
           {/* Step 0 */}
-          {currentStep === 0 && (
+          {/* {currentStep === 0 && (
             <GradientWrapper>
               <ProjectDetailsFormStep
                 event={event}
@@ -82,10 +87,10 @@ const Register = () => {
                 prevStep={prevStep}
               />
             </GradientWrapper>
-          )}
+          )} */}
 
           {/* Step 1 */}
-          {currentStep === 1 && (
+          {/* {currentStep === 1 && (
             <GradientWrapper>
               <AddMemberStep
                 event={event}
@@ -96,10 +101,10 @@ const Register = () => {
                 isPradnya={event === "pradnya"}
               />
             </GradientWrapper>
-          )}
+          )} */}
 
           {/* Step 2 */}
-          {currentStep === 2 && (
+          {/* {currentStep === 2 && (
             <GradientWrapper>
               <CollegeDetailsStep
                 event={event}
@@ -107,10 +112,10 @@ const Register = () => {
                 prevStep={prevStep}
               />
             </GradientWrapper>
-          )}
+          )} */}
 
           {/* Step 3 */}
-          {currentStep === 3 && (
+          {/* {currentStep === 3 && (
             <GradientWrapper>
               <PaymentStep
                 event={event}
@@ -119,7 +124,7 @@ const Register = () => {
                 prevStep={prevStep}
               />
             </GradientWrapper>
-          )}
+          )} */}
         </div>
       </div>
     </>
@@ -128,10 +133,39 @@ const Register = () => {
 
 export default Register;
 
-const GradientWrapper = ({ children }) => {
+// const GradientWrapper = ({ children }) => {
+//   return (
+//     <div className="bg-gradient-to-r from-dark-blue via-light-blue to-orange-100 w-full max-w-7xl mx-auto p-px">
+//       {children}
+//     </div>
+//   );
+// };
+
+
+
+const EventCloseMessage = ({ event_name }) => {
   return (
-    <div className="bg-gradient-to-r from-dark-blue via-light-blue to-orange-100 w-full max-w-7xl mx-auto p-px">
-      {children}
+    <div className="max-w-7xl mx-auto bg-gradient-to-r from-dark-blue via-light-blue to-orange-100 p-px">
+      <div className="bg-tertiary text-white text-center p-4">
+        <h2 className="text-lg sm:text-xl font-bold flex items-center justify-center gap-1 text-secondary">
+          <IconAlertCircle size={20}/> Registration Update - {event_name}
+        </h2>
+        <p className="mt-2 sm:text-lg">
+          Registrations for <span className="font-semibold">{event_name}</span> 
+          
+          {/*are now officially 
+           <span className="font-bold text-red-600"> CLOSED!</span> */}
+          <span className="font-bold text-green-600"> Opening soon!</span>
+        </p>
+        <p className="mt-1 text-sm sm:text-base text-slate-400">
+          {/* Thank you for the overwhelming response. */}
+           Stay tuned for further updates, and we look forward 
+          to seeing you at the event!
+        </p>
+        <p className="mt-2 text-sm italic flex items-center justify-center gap-1 text-orange-100">
+          <IconMessageCircle size={18} /> For any queries, feel free to reach out.
+        </p>
+      </div>
     </div>
   );
 };

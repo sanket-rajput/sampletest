@@ -10,7 +10,7 @@ import {
     non_stop,
   } from "../assets";
 
-  const notifications = ["🚀 Don’t just watch innovation—be part of it! Register today! 🚀", "⚡ Code, create, and conquer—your journey begins here. ⚡"]
+  const notifications = ["🚀 Don’t just watch innovation be part of it! Register today! 🚀", "⚡ Code, create, and conquer your journey begins here. ⚡"]
   
 //   export const navItems = [
 //   { id: "about", isHome: true, title: "About" },
@@ -180,6 +180,8 @@ export const navItems = [
   //   { id: 4, _id: 'techfiesta', title: "TechFiesta", description: "International Hackathon", logo: techfiesta, color:"bg-slate-700", team_size: '4-5 members', type: 'Hackathon', date: "Registration Closed" },
   //   { id: 5, _id: 'impetus', title: "Special Event", description: "An exciting surprise awaits! Stay tuned for something unforgettable.", logo: logo, color:"bg-slate-700", team_size: '1-5 members', type: 'Unveiling Soon', date: "To Be Announced" },
   // ];
+
+
   const events = [
     { id: 1, _id: 'impetus', title: "Impetus", description: "International Level Project Exhibition and Competition.", logo: impetus, color:"bg-slate-700", team_size: '2-5 members', type: 'Project Expo', date: "Registration Opening Soon!!" },
     { id: 2, _id: 'pradnya', title: "Pradnya", description: "Compete with the best minds in the National Level Coding Contest.", logo:pradnya, color:"bg-slate-700", team_size: '1-2 members', type: 'Coding Competition', date: "Registration Opening Soon!!" },
@@ -187,6 +189,13 @@ export const navItems = [
     { id: 4, _id: 'techfiesta', title: "TechFiesta", description: "International Hackathon", logo: techfiesta, color:"bg-slate-700", team_size: '4-5 members', type: 'Hackathon', date: "Registration Closed" },
     { id: 5, _id: 'impetus', title: "Special Event", description: "An exciting surprise awaits! Stay tuned for something unforgettable.", logo: logo, color:"bg-slate-700", team_size: '1-5 members', type: 'Unveiling Soon', date: "To Be Announced" },
   ];
+  // const events = [
+  //   { id: 1, _id: 'impetus', title: "Impetus", description: "International Level Project Exhibition and Competition.", logo: impetus, color:"bg-slate-700", team_size: '2-5 members', type: 'Project Expo', date: "Registration Opening Soon!!" },
+  //   { id: 2, _id: 'pradnya', title: "Pradnya", description: "Compete with the best minds in the National Level Coding Contest.", logo:pradnya, color:"bg-slate-700", team_size: '1-2 members', type: 'Coding Competition', date: "Registration Opening Soon!!" },
+  //   { id: 3, _id: 'concepts', title: "Concepts", description: "The most grand project exhibition event Concepts for final year student.", logo: concepts, color:"bg-slate-700", team_size: '2-5 members', type: 'Project Expo', date: "Registration Opening Soon!!" },
+  //   { id: 4, _id: 'techfiesta', title: "TechFiesta", description: "International Hackathon", logo: techfiesta, color:"bg-slate-700", team_size: '4-5 members', type: 'Hackathon', date: "Registration Closed" },
+  //   { id: 5, _id: 'impetus', title: "Special Event", description: "An exciting surprise awaits! Stay tuned for something unforgettable.", logo: logo, color:"bg-slate-700", team_size: '1-5 members', type: 'Unveiling Soon', date: "To Be Announced" },
+  // ];
 
   const eventsData = {
     impetus: {
@@ -445,9 +454,9 @@ export const navItems = [
   };
 
   const ruleBookLinks = new Map([
-    ["impetus", "https://drive.google.com/file/d/1n2Ksym9IS7eORj2VyhvhZb2vMZwTZgM2/view?usp=sharing"],
-    ["concepts", "https://drive.google.com/file/d/1SS87y18kA5TbseNXieuszv84eFqQf1YI/view?usp=sharing"],
-    ["pradnya", "https://drive.google.com/file/d/1SZKhQM-5kQAT_rshHYQdZLtOlWTfXiEt/view?usp=sharing"],
+    ["impetus", "https://drive.google.com/file/d/1DTuHnhVu7lB86bv3Q9EEftgazO1n9-p4/view?usp=sharing?usp=sharing"],
+    ["concepts", "https://drive.google.com/file/d/1LM-MSPiFd6zu553_E0KYUneLgTXme90U/view?usp=sharing?usp=sharing"],
+    ["pradnya", "https://drive.google.com/file/d/1rn0ZefC-s9GLbdRhFsHmfqaFX4hlw-5r/view?usp=sharing?usp=sharing"],
   ])
 
   const faculty = [
